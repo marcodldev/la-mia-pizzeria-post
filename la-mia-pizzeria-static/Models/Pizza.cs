@@ -8,11 +8,12 @@ namespace la_mia_pizzeria_static.Models
     {
         public Pizza() { }
 
-        public Pizza(string name, string description, string imgUrl)
+        public Pizza(string name, string description, string imgUrl, double prezzo)
         {
             Name = name;
             Description = description;
             ImgUrl = imgUrl;
+            Prezzo = prezzo;
         }
 
         public int Id { get; set; }
@@ -27,5 +28,8 @@ namespace la_mia_pizzeria_static.Models
 
         [Required(ErrorMessage = "L'immagine è obbligatoria.")]
         public string ImgUrl { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Il prezzo è obbligatorio")]
+        public double Prezzo { get; set; }
     }
 }

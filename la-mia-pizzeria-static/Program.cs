@@ -29,7 +29,7 @@ app.MapControllerRoute(
 
 using (var ctx = new PizzaContext())
 {
-    ctx.Seed();        
+    ctx.Seed();
 }
 
 app.Run();
