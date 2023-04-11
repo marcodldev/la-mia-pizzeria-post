@@ -1,0 +1,28 @@
+﻿@model Pizza
+@{
+ 
+    Layout = "LayoutCustom";
+    var pizza = Model;
+}
+
+<div>
+
+    <img src="~/@pizza.ImgUrl" class="card-img-top" alt="@pizza.Name">
+
+    <div class="p-3"><p>Nome: @pizza.Name</p></div>
+
+    <div class="p-1"><p>Nome: @pizza.Description</p></div>
+
+</div>
+ 
+
+
+
+</div>
+
+<style>
+
+    body {
+        color: white;
+    }
+</style>
