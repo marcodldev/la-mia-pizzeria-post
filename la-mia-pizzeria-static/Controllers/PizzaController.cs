@@ -32,20 +32,20 @@ namespace la_mia_pizzeria_static.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Pizza data)
+        public IActionResult Create(Pizza pizza)
         {
 
             if (!ModelState.IsValid)
             {
-                return View("Create", data);
+                return View("Create", pizza);
             }
 
             using (PizzaContext ctx = new PizzaContext())
             {
                 Pizza nuovaPizza = new Pizza();
-                nuovaPizza.Name = data.Name;
-                nuovaPizza.Description = data.Description;
-                nuovaPizza.ImgUrl = data.ImgUrl;
+                nuovaPizza.Name = pizza.Name;
+                nuovaPizza.Description = pizza.Description;
+                nuovaPizza.ImgUrl = pizza.ImgUrl;
 
                 ctx.Pizze.Add(nuovaPizza);
                 ctx.SaveChanges();
