@@ -42,10 +42,11 @@ namespace la_mia_pizzeria_static.Controllers
 
             using (PizzaContext ctx = new PizzaContext())
             {
+                string url = "/img/";
                 Pizza nuovaPizza = new Pizza();
                 nuovaPizza.Name = pizza.Name;
                 nuovaPizza.Description = pizza.Description;
-                nuovaPizza.ImgUrl = pizza.ImgUrl;
+                nuovaPizza.ImgUrl = url+pizza.ImgUrl;
 
                 ctx.Pizze.Add(nuovaPizza);
                 ctx.SaveChanges();

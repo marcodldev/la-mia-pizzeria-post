@@ -23,8 +23,8 @@ namespace la_mia_pizzeria_static.Models
         public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "La descrizione è obbligatoria.")]
-        [StringLength(250, ErrorMessage = "La descrizione della pizza non puo' avere più di 250 caratteri.")]
-        public string Description { get; set; } = string.Empty;
+        [StringLength(700, ErrorMessage = "La descrizione della pizza non puo' avere più di 700 caratteri.")]
+        public string Description { get; set; }
 
         [Required(ErrorMessage = "L'immagine è obbligatoria.")]
         public string ImgUrl { get; set; } = string.Empty;
